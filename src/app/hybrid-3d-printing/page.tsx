@@ -3,21 +3,7 @@ import threeDPrinting1 from "@assets/images/threeDPrinting1.jpg";
 import threeDPrinting2 from "@assets/images/threeDPrinting2.jpg";
 import Link from "next/link";
 
-const CourseCard = ({ title, description, buttonLabel, buttonLink }) => {
-    return (
-        <div className="bg-white flex flex-col items-center md:p-12 p-8 border-3 border-black">
-            <h2 className="text-center text-[30px]  font-semibold mb-4">{title}</h2>
-            <p className="text-gray-600 p-[10px] text-[16px] md:text-[18px] mb-6">{description}</p>
-            <button
-                className="mx-auto text-[20px] leading-[20px] font-normal bg-green-600 text-white px-4 py-2 rounded-full hover:text-green-700 hover:bg-white hover:border-1 hover:border-green-600 transition  "
-            >
-                {buttonLabel}
-            </button>
-        </div>
-    );
-};
-
-const Page = () => {
+const Printing3DPage = () => {
     return (
         <div className="bg-[#dee1e3] min-h-screen">
             <div className="relative bg-blue-900 text-white md:py-24 py-8 md:h-[247px] h-[126px] before:z-10 before:absolute before:left-0 before:right-0 before:top-0 before:bottom-0 before:w-full before:h-full before:bg-[#1f28388c] ">
@@ -77,7 +63,7 @@ const Page = () => {
                     </figure>
                     <div className="bg-[#0d3657] text-white flex flex-col items-center justify-center gap-4 p-6">
                         <h2 className="text-center  text-[30px]  font-semibold ">
-                        Want to work with the EMLab?
+                            Want to work with the EMLab?
                         </h2>
                         <p className=" text-[14px] md:text-[18px] text-center">
                             Get in touch and let’s see what we can do together.
@@ -95,4 +81,4 @@ const Page = () => {
     );
 };
 
-export default Page;
+export default Printing3DPage;
