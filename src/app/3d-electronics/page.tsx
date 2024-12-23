@@ -28,8 +28,8 @@ const Electronics3DPage = () => {
                         <p className="text-gray-600 p-[10px] text-[16px] md:text-[18px] mb-6">
 
                             A custom tool was developed to design 3D, conformal, and other nontraditional circuits.  The tool imports a netlist and component geometries and allows the user to layout components and route interconnects with complete geometric freedom.  The tool was developed as an add-on to the open-source software
-                            <Link href='/'>Blender</Link>
-                            and is the only known tool of its kind, giving the EMLab many unique capabilities.
+                            &nbsp; <Link className='border-b-2 border-b-green-600' href='https://www.blender.org/'>Blender</Link>
+                            &nbsp; and is the only known tool of its kind, giving the EMLab many unique capabilities.
                         </p>
                     </figure>
 
@@ -52,13 +52,13 @@ const Electronics3DPage = () => {
                     <h2 className="text- text-[21px] font-semibold mb-4">Learning Resources for 3D Volumetric Circuits</h2>
                     <ul className="list-disc ml-8">
                         <li className="text-green-600 underline ">
-                            <Link href='/'>Design and Hybrid Additive Manufacturing of 3D/Volumetric Electrical Circuits</Link>
+                            <Link href='https://doi.org/10.1109/TCPMT.2019.2892389'>Design and Hybrid Additive Manufacturing of 3D/Volumetric Electrical Circuits</Link>
                         </li>
                         <li className="text-green-600 underline">
-                            <Link href='/'>Automated Hybrid 3D Printing of 3D Meandering Interconnects</Link>
+                            <Link href='https://ieeexplore.ieee.org/document/8689070'>Automated Hybrid 3D Printing of 3D Meandering Interconnects</Link>
                         </li>
                         <li className="text-green-600 underline">
-                            <Link href='/'>Broadband Microwave Frequency Characterization of 3-D Printed Materials</Link>
+                            <Link href='http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6574280'>Broadband Microwave Frequency Characterization of 3-D Printed Materials</Link>
                         </li>
                     </ul>
                     <hr className="h-[4px] my-4 bg-green-600 w-[82%] mx-auto" />

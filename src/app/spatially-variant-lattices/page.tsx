@@ -2,8 +2,8 @@ import hybrid3dPrintingBanner from "@assets/images/hybrid3dPrintingBanner.jpg";
 import variantLatices1 from "@assets/images/variantLatices1.png";
 import variantLatices2 from "@assets/images/variantLatices2.jpg";
 import Link from "next/link";
-import Figure from "../components/figure";
-import WorkWithUs from "../components/workWithUs";
+import Figure from "../common/figure";
+import WorkWithUs from "../common/workWithUs";
 
 const SpatiallyVariantLaticesPage = () => {
     return (
@@ -25,10 +25,10 @@ const SpatiallyVariantLaticesPage = () => {
                     <h2 className="text- text-[21px] font-semibold mb-4">Learning Resources for Spatially-Variant Lattices</h2>
                     <ul className="list-disc ml-8 mb-6">
                         <li className="text-green-600 underline ">
-                            <Link href='/'>Generating Spatially Variant Lattices</Link>
+                            <Link href='https://empossible.net/academics/svl-short-course/'>Generating Spatially Variant Lattices</Link>
                         </li>
                         <li className="text-green-600 underline">
-                            <Link href='/'>Implementation of Numerical Transformation Optics in MATLAB</Link>
+                            <Link href='https://empossible.thinkific.com/courses/fdmto'>Implementation of Numerical Transformation Optics in MATLAB</Link>
                         </li>
                     </ul>
 
@@ -44,27 +44,14 @@ const SpatiallyVariantLaticesPage = () => {
                     <h2 className="text- text-[21px] font-semibold mb-4">Learning Resources for Spatially Variant Algorithms</h2>
                     <ul className="list-disc ml-8">
                         <li className="text-green-600 underline ">
-                            <Link href='/'>Generating Spatially Variant Lattices</Link>
+                            <Link href='https://3000-adarshhatka-peajmireweb-n8uy8qukkwa.ws-us117.gitpod.io/'>Generating Spatially Variant Lattices</Link>
                         </li>
                         <li className="text-green-600 underline">
-                            <Link href='/'>Synthesis of Spatially Variant Lattices</Link>
+                            <Link href='https://empossible.net/academics/svl-short-course/'>Synthesis of Spatially Variant Lattices</Link>
                         </li>
                     </ul>
                     <hr className="h-[4px] my-4 bg-green-600 w-[82%] mx-auto" />
 
-                    {/* <figure>
-                        <h2 className="text-center text-[30px]  font-semibold mb-4">
-                            Conformal Arrays
-                        </h2>
-
-                        <div className="flex gap-2">
-                            <img src={variantLatices1.src} className="grow w-[49%]" alt="Image" />
-                            <img src={variantLatices2.src} className="grow w-[49%]" alt="Image" />
-                        </div>
-                        <p className="text-gray-600 p-[10px] text-[16px] md:text-[18px] mb-6">
-                            The SVL algorithm was adapted to generate periodic structures over doubly-curved surfaces.  This generates arrays over any curve while maintaining the size, shape, and spacing of the elements distributed over the surface in order to preserve the electromagnetic properties.  This is being applied to frequency selective surfaces, metasurfaces, guided-mode resonance filters, array antennas, diffraction gratings, and more.
-                        </p>
-                    </figure> */}
 
                     <Figure
                         title="Conformal Arrays"
@@ -77,25 +64,14 @@ const SpatiallyVariantLaticesPage = () => {
                     <h2 className="text- text-[21px] font-semibold mb-4">Learning Resources for Conformal Arrays</h2>
                     <ul className="list-disc ml-8">
                         <li className="text-green-600 underline ">
-                            <Link href='/'>Spatially-Variant Periodic Structures in Electromagnetics</Link>
+                            <Link href='http://rsta.royalsocietypublishing.org/cgi/content/abstract/rsta.2014.0359?ijkey=zXn5l8KyjW7q52j&keytype=ref'>Spatially-Variant Periodic Structures in Electromagnetics</Link>
                         </li>
-                        <li className="text-green-600 underline">
+                        <li className="text-gray-600 ">
                             Conformal Frequency Selective Surfaces for Arbitrary Curvature (pending review)
                         </li>
                     </ul>
                     <hr className="h-[4px] my-4 bg-green-600 w-[82%] mx-auto" />
 
-                    {/* <figure>
-                        <h2 className="text-center text-[30px]  font-semibold mb-4">
-                        Spatially Variant Lattices for Transformation Optic Devices
-                        </h2>
-
-                        <video className="mx-auto" src='https://raymondrumpf.com/wp-content/uploads/2021/12/MM-600.mp4' autoPlay muted controls loop></video>
-
-                        <p className="text-gray-600 p-[10px] text-[16px] md:text-[18px] mb-6">
-                        Transformation optics (TO) is a mathematical technique to calculate the permittivity and permeability that flows waves according to a spatial transform.  Most often this leads to anisotropic and extreme values for both permittivity and permeability that can only be realized using metamaterials.  To design a functional device, it is necessary to vary the size, shape, and orientation of the metamaterial elements through the volume of the device.  The EMLab adapted the SVL algorithm to generate these metamaterial lattices that fill space most efficiently and avoid overlapping elements.
-                        </p>
-                        </figure> */}
 
                     <Figure
                         title="Spatially Variant Lattices for Transformation Optic Devices"
@@ -109,13 +85,13 @@ const SpatiallyVariantLaticesPage = () => {
                     <h2 className="text- text-[21px] font-semibold mb-4">Learning Resources for Transformation Optics</h2>
                     <ul className="list-disc ml-8 mb-6">
                         <li className="text-green-600 underline ">
-                            <Link href='/'>Generating Spatially-Variant Metamaterial Lattices Design from Spatial Transforms</Link>
+                            <Link href='https://www.jpier.org/PIERM/pier.php?paper=19103004'>Generating Spatially-Variant Metamaterial Lattices Design from Spatial Transforms</Link>
                         </li>
                         <li className="text-green-600 underline ">
-                            <Link href='/'>Design and Simulation of Arbitrarily-Shaped Transformation Optics Devices Using a Simple Finite-Difference Method</Link>
+                            <Link href='http://www.jpier.org/pierb/pier.php?paper=16012007'>Design and Simulation of Arbitrarily-Shaped Transformation Optics Devices Using a Simple Finite-Difference Method</Link>
                         </li>
                         <li className="text-green-600 underline ">
-                            <Link href='/'>Implementation of Numerical Transformation Optics in MATLAB</Link>
+                            <Link href='https://empossible.thinkific.com/courses/fdmto'>Implementation of Numerical Transformation Optics in MATLAB</Link>
                         </li>
                     </ul>
 

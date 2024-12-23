@@ -4,8 +4,8 @@ import computational2 from "@assets/images/computational2.png";
 import computational3 from "@assets/images/computational3.jpg";
 import computational4 from "@assets/images/computational4.png";
 import Link from "next/link";
-import Figure from "../components/figure";
-import WorkWithUs from "../components/workWithUs";
+import Figure from "../common/figure";
+import WorkWithUs from "../common/workWithUs";
 
 const Printing3DPage = () => {
     return (
@@ -22,14 +22,14 @@ const Printing3DPage = () => {
 
                     <p className="text-gray-600 p-[10px]  text-[16px] md:text-[18px] mb-6">
                         The EMLab is one of the strongest research groups in the world for computational analysis of electromagnetic devices.  Capabilities continue to grow in the areas of optimization, GPU and scalable computing, unstructured grids, and hybridization of different methods such as ray tracing and finite-difference time-domain.  Much of what Dr. Rumpf has accomplished has been made available through the courses on
-                        <Link className="border-b-2 border-b-green-600" href='https://empossible.net/'>EMPossible</Link>
-                        and a
-                        <Link className="border-b-2 border-b-green-600" href='https://empossible.net/fdfdbook/'>book</Link>
-                        written specifically for the complete beginner to get started in computational electromagnetics.
+                        &nbsp; <Link className="border-b-2 border-b-green-600" href='https://empossible.net/'>EMPossible</Link>
+                        &nbsp; and a
+                        &nbsp;<Link className="border-b-2 border-b-green-600" href='https://empossible.net/fdfdbook/'>book</Link>
+                        &nbsp; written specifically for the complete beginner to get started in computational electromagnetics.
                     </p>
 
                     <Link className="border-b-2 border-b-green-600 mb-6" href='http://raymondrumpf.com/wp-content/uploads/2022/02/EMLab-Hotsheet-Electromagnetic-and-Photonic-Simulation.pdf'>Electromagnetic & Photonic Simulation Flyer</Link>
-
+                    <div className="my-4"></div>
                     <Figure
                         title="Finite-Difference Time-Domain"
                         medias={[computational1]}

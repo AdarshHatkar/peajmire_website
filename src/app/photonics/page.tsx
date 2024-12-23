@@ -2,8 +2,8 @@ import hybrid3dPrintingBanner from "@assets/images/hybrid3dPrintingBanner.jpg";
 import photonics1 from "@assets/images/photonics1.png";
 import photonics2 from "@assets/images/photonics2.png";
 import Link from "next/link";
-import Figure from "../components/figure";
-import WorkWithUs from "../components/workWithUs";
+import Figure from "../common/figure";
+import WorkWithUs from "../common/workWithUs";
 
 const PhotonicPage = () => {
     return (
@@ -36,16 +36,16 @@ const PhotonicPage = () => {
                     <h2 className="text- text-[21px] font-semibold mb-4">Learning Resources for Spatially Variant Crystals</h2>
                     <ul className="list-disc ml-8">
                         <li className="text-green-600 underline ">
-                            <Link href='/'>Independent Control of Phase and Power in Spatially Variant Self-Collimating Photonic Crystals</Link>
+                            <Link href='https://doi.org/10.1364/JOSAA.36.001534'>Independent Control of Phase and Power in Spatially Variant Self-Collimating Photonic Crystals</Link>
                         </li>
                         <li className="text-green-600 underline">
-                            <Link href='/'>Tight Control of Light Beams in Photonic Crystals with Spatially Variant Lattice Orientation</Link>
+                            <Link href='http://dx.doi.org/10.1364/OE.22.025788'>Tight Control of Light Beams in Photonic Crystals with Spatially Variant Lattice Orientation</Link>
                         </li>
                         <li className="text-green-600 underline">
-                            <Link href='/'>Optimization of Planar Self-Collimating Photonic Crystals</Link>
+                            <Link href='http://dx.doi.org/10.1364/JOSAA.30.001297'>Optimization of Planar Self-Collimating Photonic Crystals</Link>
                         </li>
                         <li className="text-green-600 underline">
-                            <Link href='/'>3D Printed Lattices with Spatially Variant Self-Collimation</Link>
+                            <Link href='http://www.jpier.org/PIER/pier139/01.13030507.pdf'>3D Printed Lattices with Spatially Variant Self-Collimation</Link>
                         </li>
                     </ul>
                     <hr className="h-[4px] my-4 bg-green-600 w-[82%] mx-auto" />

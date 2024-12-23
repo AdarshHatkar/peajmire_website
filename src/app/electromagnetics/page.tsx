@@ -5,8 +5,8 @@ import electromagnetics3 from "@assets/images/electromagnetics3.jpg";
 import electromagnetics4 from "@assets/images/electromagnetics4.jpg";
 import electromagnetics5 from "@assets/images/electromagnetics5.jpg";
 import Link from "next/link";
-import Figure from "../components/figure";
-import WorkWithUs from "../components/workWithUs";
+import Figure from "../common/figure";
+import WorkWithUs from "../common/workWithUs";
 
 const Printing3DPage = () => {
     return (
@@ -29,28 +29,28 @@ const Printing3DPage = () => {
                     <h2 className="text- text-[21px] font-semibold mb-4">Learning Resources for Electromagnetics:</h2>
                     <ul className="list-disc ml-8">
                         <li className="text-green-600 underline ">
-                            <Link href='/'>
-                            Electromagnetic Field Theory
+                            <Link href='https://empossible.net/emp3302/'>
+                                Electromagnetic Field Theory
                             </Link>
                         </li>
                         <li className="text-green-600 underline">
-                            <Link href='/'>
-                            Microwave Engineering
+                            <Link href='https://empossible.net/emp4301_5302/'>
+                                Microwave Engineering
                             </Link>
                         </li>
                         <li className="text-green-600 underline">
-                            <Link href='/'>
-                            Antenna Engineering
+                            <Link href='https://empossible.net/emp4305_5303/'>
+                                Antenna Engineering
                             </Link>
                         </li>
                         <li className="text-green-600 underline">
-                            <Link href='/'>
-                            21st Century Electromagnetics
+                            <Link href='https://empossible.net/academics/emp6303/'>
+                                21st Century Electromagnetics
                             </Link>
                         </li>
                         <li className="text-green-600 underline">
-                            <Link href='/'>
-                            Engineering the Dispersion and Anisotropy of Periodic Electromagnetic Structures
+                            <Link href='http://dx.doi.org/10.1016/bs.ssp.2015.02.002'>
+                                Engineering the Dispersion and Anisotropy of Periodic Electromagnetic Structures
                             </Link>
                         </li>
                     </ul>
@@ -67,13 +67,13 @@ const Printing3DPage = () => {
                     <h2 className="text- text-[21px] font-semibold mb-4">Learning Resources for Three-Dimensional Antennas</h2>
                     <ul className="list-disc ml-8">
                         <li className="text-green-600 underline ">
-                            <Link href='/'>
-                            Ultra-Thin 3D Printed All-Dielectric Antenna
+                            <Link href='http://www.jpier.org/PIERC/pier.php?paper=16020602'>
+                                Ultra-Thin 3D Printed All-Dielectric Antenna
                             </Link>
                         </li>
                         <li className="text-green-600 underline">
-                            <Link href='/'>
-                            Effects of Extreme Surface Roughness on 3D Printed Horn Antenna
+                            <Link href='http://www.jpier.org/PIERC/pier.php?paper=16020602'>
+                                Effects of Extreme Surface Roughness on 3D Printed Horn Antenna
                             </Link>
                         </li>
                     </ul>
@@ -92,8 +92,8 @@ const Printing3DPage = () => {
                     <h2 className="text- text-[21px] font-semibold mb-4">Resources for Conformal Electromagnetic Arrays</h2>
                     <ul className="list-disc ml-8">
                         <li className="text-green-600 underline ">
-                            <Link href='/'>
-                            Spatially-Variant Periodic Structures in Electromagnetics
+                            <Link href='http://rsta.royalsocietypublishing.org/cgi/content/abstract/rsta.2014.0359?ijkey=zXn5l8KyjW7q52j&keytype=ref'>
+                                Spatially-Variant Periodic Structures in Electromagnetics
                             </Link>
                         </li>
                         <li className="text-gray-600">
@@ -114,23 +114,23 @@ const Printing3DPage = () => {
                     <h2 className="text- text-[21px] font-semibold mb-4">Learning Resources for High-Power Microwave FSS</h2>
                     <ul className="list-disc ml-8">
                         <li className="text-green-600 underline ">
-                            <Link href='/'>
-                            All-Dielectric Frequency Selective Surfaces with Few Periods
+                            <Link href='http://www.jpier.org/pierb/pier.php?paper=12042404'>
+                                All-Dielectric Frequency Selective Surfaces with Few Periods
                             </Link>
                         </li>
                         <li className="text-green-600 underline">
-                            <Link href='/'>
-                            Guided-Mode Resonance Filter Compensated to Opedrate on a Curved Surface
+                            <Link href='http://www.jpier.org/pierc/pier.php?paper=13041209'>
+                                Guided-Mode Resonance Filter Compensated to Opedrate on a Curved Surface
                             </Link>
                         </li>
                         <li className="text-green-600 underline">
-                            <Link href='/'>
-                            All-Dielectric Frequency Selective Surface for High Power Microwaves
+                            <Link href='http://dx.doi.org/10.1109/TAP.2014.2320525'>
+                                All-Dielectric Frequency Selective Surface for High Power Microwaves
                             </Link>
                         </li>
                         <li className="text-green-600 underline">
-                            <Link href='/'>
-                            3D Printed All-Dielectric Frequency Selective Surface with Large Bandwidth and Field-of-View
+                            <Link href='http://dx.doi.org/10.1109/TAP.2015.2388541'>
+                                3D Printed All-Dielectric Frequency Selective Surface with Large Bandwidth and Field-of-View
                             </Link>
                         </li>
                     </ul>
