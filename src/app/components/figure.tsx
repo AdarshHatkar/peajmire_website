@@ -19,7 +19,7 @@ export default function Figure({ description, medias, title }: TFigure) {
 
                     <div className="flex gap-2">
                         {medias.map((media, i) =>
-                            <img key={i} src={media.src} className={`${medias.length > 0 ? "mx-auto" : "grow w-[49%] mx-auto"}`} alt="Image" />
+                            <img key={i} src={media.src} className={`${medias.length === 0 ? "mx-auto" : "grow w-[49%] mx-auto"}`} alt="Image" />
                         )}
                     </div>
                 </>

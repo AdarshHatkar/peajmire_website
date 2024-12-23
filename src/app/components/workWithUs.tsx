@@ -1,7 +1,7 @@
 
 export default function WorkWithUs() {
     return <>
-          <div className="bg-[#0d3657] text-white flex flex-col items-center justify-center gap-4 p-6">
+          <div className="bg-[#0d3657] text-white flex flex-col items-center justify-center gap-4 p-6 mt-6">
                         <h2 className="text-center  text-[30px]  font-semibold ">
                             Want to work with the EMLab?
                         </h2>
