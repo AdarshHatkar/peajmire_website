@@ -2,6 +2,8 @@ import hybrid3dPrintingBanner from "@assets/images/hybrid3dPrintingBanner.jpg";
 import threeDPrinting1 from "@assets/images/threeDPrinting1.jpg";
 import threeDPrinting2 from "@assets/images/threeDPrinting2.jpg";
 import Link from "next/link";
+import Figure from "../components/figure";
+import WorkWithUs from "../components/workWithUs";
 
 const Printing3DPage = () => {
     return (
@@ -16,6 +18,7 @@ const Printing3DPage = () => {
 
             <div className="relative md:top-[-45px] z-30 max-w-[768px] w-[88%] mx-auto ">
                 <main className=" bg-white  mx-auto md:p-14 py-14">
+
                     <p className="text-gray-600 p-[10px]  text-[16px] md:text-[18px] mb-6">
                         Hybrid 3D printing is necessary for manufacturing parts composed of very different materials and components.  This is only possible using multiple 3D printing processes and multiple materials at the same time.  Hybrid 3D printing hardware is already capable of producing such parts, but there is a profound lack of software, algorithms, processes, standards, and best practices to make this happen.  The EMLab has been a pioneer and leader in hybrid 3D printing, developing and demonstrating many of the first software tools and demonstrations of automated hybrid 3D printing.
                     </p>
@@ -24,12 +27,21 @@ const Printing3DPage = () => {
                             Hybrid 3D Printing Flyer
                         </Link>
                     </p>
-                    <figure>
+                    {/* <figure>
                         <h2 className="text-center text-[30px]  font-semibold mb-4">Direct-Write Hybrid 3D Printing</h2>
                         <video className="mx-auto" src='https://raymondrumpf.com/wp-content/uploads/2021/12/HJ-600.mp4' autoPlay muted controls loop></video>
                         <p className="text-gray-600 p-[10px] text-[16px] md:text-[18px] mb-6">
                             The EMLab has automated direct-write hybrid 3D printing to create the only known capability in the world to manufacture three-dimensional parts with an arbitrary distribution of metals and dielectrics.  This research includes software, materials, and 3D printing processes.  The capability is being used to manufacture 3D circuits, conformal circuits, 3D antennas, metamaterials, metasurfaces, frequency selective surfaces, and more.                    </p>
-                    </figure>
+                    </figure> */}
+
+                    <Figure
+                        title="Direct-Write Hybrid 3D Printing"
+                        medias={["https://raymondrumpf.com/wp-content/uploads/2021/12/HJ-600.mp4"]}
+                        description={<>
+                            The EMLab has automated direct-write hybrid 3D printing to create the only known capability in the world to manufacture three-dimensional parts with an arbitrary distribution of metals and dielectrics.  This research includes software, materials, and 3D printing processes.  The capability is being used to manufacture 3D circuits, conformal circuits, 3D antennas, metamaterials, metasurfaces, frequency selective surfaces, and more.
+                        </>}
+                    />
+
                     <h2 className="text- text-[21px] font-semibold mb-4">Learning resources for Hybrid 3D Printing</h2>
                     <ul className="list-disc ml-8">
                         <li className="text-green-600 underline ">
@@ -43,7 +55,8 @@ const Printing3DPage = () => {
                         </li>
                     </ul>
                     <hr className="h-[4px] my-4 bg-green-600 w-[82%] mx-auto" />
-                    <figure>
+
+                    {/* <figure>
                         <h2 className="text-center text-[30px]  font-semibold mb-4">
                             Advanced Slicer for Modern Digital Manufacturing
                         </h2>
@@ -60,20 +73,21 @@ const Printing3DPage = () => {
                             is available for consulting, developing customized slicer functions, and contract research and development in the areas of 3D printing, electromagnetics, and photonics.
                         </p>
 
-                    </figure>
-                    <div className="bg-[#0d3657] text-white flex flex-col items-center justify-center gap-4 p-6">
-                        <h2 className="text-center  text-[30px]  font-semibold ">
-                            Want to work with the EMLab?
-                        </h2>
-                        <p className=" text-[14px] md:text-[18px] text-center">
-                            Get in touch and let’s see what we can do together.
-                        </p>
-                        <button
-                            className="mx-auto text-[20px] leading-[20px] font-normal bg-green-600 text-white px-4 py-2 rounded-full hover:text-green-700 hover:bg-white hover:border-1 hover:border-green-600 transition  ">
-                            Contact Us
-                        </button>
+                    </figure> */}
 
-                    </div>
+                    <Figure
+                        title="Advanced Slicer for Modern Digital Manufacturing"
+                        medias={[threeDPrinting1, threeDPrinting2]}
+                        description={<>
+                            Dr. Rumpf is a founder of
+                            <Link href='/' className="border-b-green-600 border-b-2"> Kraetonics LLC </Link>
+                            , which has written a modern slicer from the ground up.  The slicer is capable of off-axis printing, conformal printing, hybrid 3D printing, 3D printing of functionally graded materials, and other advanced processes in digital manufacturing. Additionally, the slicer is highly customizable to address new and novel applications.
+                            <Link href='/' className="border-b-green-600 border-b-2"> Kraetonics LLC</Link>
+                            is available for consulting, developing customized slicer functions, and contract research and development in the areas of 3D printing, electromagnetics, and photonics.
+                        </>}
+                    />
+
+                    <WorkWithUs />
 
                 </main>
             </div>
