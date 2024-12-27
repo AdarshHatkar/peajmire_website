@@ -3,14 +3,15 @@ import publicationsBanner from "@assets/images/publicationsBanner.jpg";
 import { Pagination, Select, SelectItem } from "@nextui-org/react";
 import { publicationTypes, allTags, allAuthors, publications } from "./constants";
 import Publication from "./-components/publication";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { Suspense } from "react";
 
 export default function PublicationsPage() {
     const router = useRouter();
-    const params = useSearchParams();
-    const page = params.get("page") || 1;
+    // const params = useSearchParams();
+
     //update sortedPublications according to page
+    // const page = params.get("page") || 1;
     const sortedPublications = [...publications].sort((a, b) => b.publishedYear - a.publishedYear);
 
     const groupedPublications = sortedPublications.reduce((groups, publication) => {
