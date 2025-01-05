@@ -50,4 +50,31 @@ export const newsData = [
         tags: ["Publications", "Book", "Electromagnetics"],
         link: "#",
     },
+    {
+        id: 6,
+        image: news1,
+        title: "Dr. Rumpf Named Senior Member of the National Academy of Inventors",
+        description:
+            "Dr. Raymond C. Rumpf, Ph.D., has been named senior member of the National Academy of Inventors (NAI). He is among the 124 foremost emerging academic inventors recognized by NAI’s Member Institutions for the 2024 class.",
+        tags: ["Career", "Recognition", "NAI"],
+        link: "#",
+    },
+    {
+        id: 7,
+        image: news2,
+        title: 'Dr. Rumpf Speaks at 24th International Conference-School "Advanced Materials and Technologies"',
+        description:
+            "Dr. Raymond Rumpf traveled to Kaunas University of Technology in Lithuania for the 24th International Conference themed 'Advanced Materials and Technologies'. He delivered three presentations on electromagnetics and photonics.",
+        tags: ["Career", "Conference", "Research"],
+        link: "#",
+    },
+    {
+        id: 8,
+        image: news3,
+        title: "Getting Started in Numerical Methods",
+        description:
+            "Dr. Rumpf emphasizes the importance of visualization in numerical computation. Visualization accelerates computation and enhances understanding, making it a key skill for success in numerical methods.",
+        tags: ["Wisdom", "Numerical Methods", "Education"],
+        link: "#",
+    },
 ];

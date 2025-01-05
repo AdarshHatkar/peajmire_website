@@ -19,7 +19,7 @@ export default function NewsPage() {
         <>
             <div className="w-full bg-[#F6F8FA]">
                 <div className="relative">
-                    <Image src={newsBanner} alt="news banner" className="w-full h-60 object-cover"></Image>
+                    <Image src={newsBanner} alt="news banner" className="w-full h-44 md:h-60 object-cover"></Image>
                     <div className="absolute inset-0 z-10 flex justify-center items-center">
                         <h2 className="text-4xl font-semibold text-white">News</h2>{" "}
                     </div>
