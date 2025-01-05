@@ -7,8 +7,10 @@ import { IoFolderOpenOutline } from "react-icons/io5";
 
 import { useState } from "react";
 import Pagination from "./components/pagination";
+import { useRouter } from "next/navigation";
 
 export default function NewsPage() {
+    const router = useRouter();
     const [currentPage, setCurrentPage] = useState(1);
     const totalPages = 2;
 
@@ -27,7 +29,11 @@ export default function NewsPage() {
                 <section className="py-12 xl:w-[1200px] xl:mx-auto">
                     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                         {newsData.map((news) => (
-                            <div key={news.id} className="bg-white shadow-md rounded-md flex flex-col pb-4">
+                            <div
+                                key={news.id}
+                                className="bg-white shadow-md rounded-md flex flex-col pb-4"
+                                onClick={() => router.push("/world-news")}
+                            >
                                 <Image
                                     src={news.image}
                                     alt={news.title}
