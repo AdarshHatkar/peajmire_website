@@ -13,9 +13,9 @@ import man from "@assets/images/manWithDice.jpg";
 import news1 from "@assets/images/nai.png";
 import news2 from "@assets/images/lithuiana.jpg";
 import news3 from "@assets/images/wisdom-image.jpg";
+import { useRouter } from "next/navigation";
 
 export default function HomePage() {
-
     const settings = {
         dots: true,
         infinite: true,
@@ -28,14 +28,13 @@ export default function HomePage() {
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
     };
-
+    const router = useRouter();
     return (
         <>
             <div className="w-full bg-[#F6F8FA]">
                 <Slider {...settings}>
                     <Hero1 />
                     <Hero2 />
-
                     <Hero3 />
                     <Hero4 />
                 </Slider>
@@ -90,7 +89,11 @@ export default function HomePage() {
                         <h2 className="text-3xl font-bold text-center mb-8">Latest News</h2>
                         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                             {newsData.map((news) => (
-                                <div key={news.id} className="bg-white shadow-md rounded-md flex flex-col pb-4">
+                                <div
+                                    key={news.id}
+                                    className="bg-white shadow-md rounded-md flex flex-col pb-4"
+                                    onClick={() => router.push("/world-news")}
+                                >
                                     <Image
                                         src={news.image}
                                         alt={news.title}
@@ -123,11 +126,10 @@ export default function HomePage() {
 function NextArrow({ onClick }: CustomArrowProps) {
     return (
         <div
-            className="absolute top-1/2 right-4 transform -translate-y-1/2 z-50 w-10 h-10 flex justify-center cursor-pointer items-center bg-black bg-opacity-50 p-2 border-2 border-transparent transition-all duration-300 hover:border-green-500 hover:rounded-full"
+            className="absolute top-1/2 right-4 transform -translate-y-1/2 z-30 w-10 h-10 flex justify-center cursor-pointer items-center bg-black bg-opacity-50 p-2 border-2 border-transparent transition-all duration-300 hover:border-green-500 hover:rounded-full"
             onClick={onClick}
         >
             <IoIosArrowBack className="text-white text-lg font-bold transform rotate-180" />
-
         </div>
     );
 }
@@ -135,7 +137,7 @@ function NextArrow({ onClick }: CustomArrowProps) {
 function PrevArrow({ onClick }: CustomArrowProps) {
     return (
         <div
-            className="absolute top-1/2 left-4 transform -translate-y-1/2 z-50 w-10 h-10 flex justify-center items-center bg-black bg-opacity-50 text-white p-2 cursor-pointer border-2 border-transparent transition-all duration-300 hover:border-green-500 hover:rounded-full"
+            className="absolute top-1/2 left-4 transform -translate-y-1/2 z-30 w-10 h-10 flex justify-center items-center bg-black bg-opacity-50 text-white p-2 cursor-pointer border-2 border-transparent transition-all duration-300 hover:border-green-500 hover:rounded-full"
             onClick={onClick}
         >
             <IoIosArrowBack className="text-white text-lg font-bold" />

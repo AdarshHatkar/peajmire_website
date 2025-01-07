@@ -7,6 +7,8 @@ import { SlMenu } from "react-icons/sl";
 import { websiteDetails } from "../constants";
 import Image from "next/image";
 import { Input } from "@nextui-org/input";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function Header() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -18,7 +20,7 @@ export default function Header() {
     const handleSubMenuToggle = (menu) => {
         setOpenSubMenu(openSubMenu === menu ? null : menu);
     };
-
+    const router = useRouter();
     return (
         <div className="w-full">
             <div className="w-full bg-[#F6F8FA] border-b-2">
@@ -46,7 +48,6 @@ export default function Header() {
                     </div>
                 </div>
             </div>
-            {/* I want to make this */}
             <div className="relative w-full xl:w-[1200px] xl:mx-auto py-2 px-4 bg-white">
                 <div className="flex justify-between items-center w-full">
                     <Image
@@ -55,22 +56,40 @@ export default function Header() {
                         width={120}
                         height={30}
                         className="hover:cursor-pointer"
+                        onClick={() => router.push("/")}
                     />
 
                     {!showSearch && (
-                        <ul className="flex justify-start items-center gap-3 text-black text-xs font-semibold">
+                        <ul className="hidden lg:flex justify-start items-center gap-4 text-black text-md font-semibold">
                             <li
                                 className="cursor-pointer hover:text-green-600 group transition-colors duration-500 relative"
                                 onMouseEnter={() => setIsCoursesHovered(true)}
                                 onMouseLeave={() => setIsCoursesHovered(false)}
+                                onClick={() => router.push("/course-offerings")}
                             >
                                 Courses Offering
                                 {isCoursesHovered && (
-                                    <div className="pt-3 right-[0.5px] absolute top-0 z-20 ">
+                                    <div className="pt-3 right-[0.5px] absolute top-0 z-50">
                                         <div className="mt-4 w-[190px] text-black bg-[#F6F8FA] z-50 border-2">
                                             <ul className="flex flex-col items-start">
-                                                <li className="p-2 hover:text-green-600">Academic Materials</li>
-                                                <li className="p-2 hover:text-green-600">EMPossible Courses</li>
+                                                <li className="p-2 hover:text-green-600">
+                                                    <Link
+                                                        href="https://empossible.net/academics/"
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                    >
+                                                        Academic Materials
+                                                    </Link>
+                                                </li>
+                                                <li className="p-2 hover:text-green-600">
+                                                    <Link
+                                                        href="https://empossible.thinkific.com/collections"
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                    >
+                                                        EMPossible Courses
+                                                    </Link>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -80,32 +99,77 @@ export default function Header() {
                                 className="cursor-pointer hover:text-green-600 group transition-colors duration-500 relative"
                                 onMouseEnter={() => setIsResearchHovered(true)}
                                 onMouseLeave={() => setIsResearchHovered(false)}
+                                onClick={() => router.push("/research")}
                             >
                                 Research
                                 {isResearchHovered && (
-                                    <div className="pt-3 right-[0.5px] absolute top-0 z-20">
+                                    <div className="pt-3 right-[0.5px] absolute top-0 z-50">
                                         <div className="mt-4 w-[190px] text-black bg-[#F6F8FA] z-50 border-2">
                                             <ul className="flex flex-col items-start">
-                                                <li className="p-2 hover:text-green-600">EMLab</li>
-                                                <li className="p-2 hover:text-green-600">Hybrid 3D Printing</li>
-                                                <li className="p-2 hover:text-green-600">Spatially Variant Lattices</li>
-                                                <li className="p-2 hover:text-green-600">Photonics</li>
-                                                <li className="p-2 hover:text-green-600">Electromagnetics</li>
+                                                {/* Prevent redirect when clicking on the dropdown items */}
                                                 <li className="p-2 hover:text-green-600">
-                                                    Computational Electromagnetics
+                                                    <Link
+                                                        href="/research"
+                                                        onClick={(e) => e.stopPropagation()} // Prevent parent onClick
+                                                    >
+                                                        EMLab
+                                                    </Link>
                                                 </li>
-                                                <li className="p-2 hover:text-green-600">EMLab Capabilities</li>
+                                                <li className="p-2 hover:text-green-600">
+                                                    <Link
+                                                        href="/hybrid-3d-printing"
+                                                        onClick={(e) => e.stopPropagation()}
+                                                    >
+                                                        Hybrid 3D Printing
+                                                    </Link>
+                                                </li>
+                                                <li className="p-2 hover:text-green-600">
+                                                    <Link
+                                                        href="/spatially-variant-lattices"
+                                                        onClick={(e) => e.stopPropagation()}
+                                                    >
+                                                        Spatially Variant Lattices
+                                                    </Link>
+                                                </li>
+                                                <li className="p-2 hover:text-green-600">
+                                                    <Link href="/photonics" onClick={(e) => e.stopPropagation()}>
+                                                        Photonics
+                                                    </Link>
+                                                </li>
+                                                <li className="p-2 hover:text-green-600">
+                                                    <Link href="/electromagnetics" onClick={(e) => e.stopPropagation()}>
+                                                        Electromagnetics
+                                                    </Link>
+                                                </li>
+                                                <li className="p-2 hover:text-green-600">
+                                                    <Link
+                                                        href="/computational-electromagnetics"
+                                                        onClick={(e) => e.stopPropagation()}
+                                                    >
+                                                        Computational Electromagnetics
+                                                    </Link>
+                                                </li>
+                                                <li className="p-2 hover:text-green-600">
+                                                    <Link
+                                                        href="/emlab-capabilities"
+                                                        onClick={(e) => e.stopPropagation()}
+                                                    >
+                                                        EMLab Capabilities
+                                                    </Link>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
                                 )}
                             </li>
+
+                            <li className="cursor-pointer hover:text-green-600 transition-colors duration-500"></li>
                             <li className="cursor-pointer hover:text-green-600 transition-colors duration-500">
-                                Publications
+                                {" "}
+                                <Link href="/news">News</Link>
                             </li>
-                            <li className="cursor-pointer hover:text-green-600 transition-colors duration-500">News</li>
                             <li className="cursor-pointer hover:text-green-600 transition-colors duration-500">
-                                About {websiteDetails.doctorName}
+                                <Link href="/about">About {websiteDetails.doctorName}</Link>
                             </li>
                             <li>
                                 <IoSearch className="text-xl cursor-pointer" onClick={() => setShowSearch(true)} />
@@ -126,7 +190,10 @@ export default function Header() {
                         )}
                     </div>
 
-                    <button className="rounded-full bg-green-600 text-white px-6 py-2 font-medium transition-all duration-300 hover:bg-white hover:text-green-500 hover:border-green-500 border-2 border-transparent">
+                    <button
+                        className="hidden lg:flex rounded-full bg-green-600 text-white px-6 py-2 font-medium transition-all duration-300 hover:bg-white hover:text-green-500 hover:border-green-500 border-2 border-transparent"
+                        onClick={() => router.push("/contact")}
+                    >
                         Contact Us
                     </button>
 
@@ -148,7 +215,7 @@ export default function Header() {
             </div>
 
             <div
-                className={`fixed top-0 right-0 bottom-0 bg-white overflow-y-auto h-full z-10 w-[90%] sm:w-[60%] px-2 pt-[40px] xl:hidden transition-all duration-300 transform ease-in-out ${
+                className={`fixed top-0 right-0 bottom-0 bg-white overflow-y-auto h-full z-40 w-[90%] sm:w-[60%] px-2 pt-[40px] xl:hidden transition-all duration-300 transform ease-in-out ${
                     isSidebarOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
                 }`}
             >
@@ -156,7 +223,9 @@ export default function Header() {
                     <ul className="flex flex-col text-black text-md pt-3">
                         <li className="py-3">
                             <div className="flex gap-4">
-                                <h2 className="w-32"> Courses Offering</h2>
+                                <h2 className="w-32">
+                                    <Link href="/course-offerings">Courses Offering</Link>{" "}
+                                </h2>
                                 <span onClick={() => handleSubMenuToggle("courses")}>
                                     <IoMdArrowDropdown />
                                 </span>
@@ -167,14 +236,33 @@ export default function Header() {
                                 }`}
                             >
                                 <ul className="mt-3 text-md pl-2">
-                                    <li className="py-2">Academic Materials</li>
-                                    <li className="py-2">EMPossible Courses</li>
+                                    <li className="py-2">
+                                        <Link
+                                            href="https://empossible.net/academics/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            Academic Materials
+                                        </Link>
+                                    </li>
+                                    <li className="py-2">
+                                        <Link
+                                            href="https://empossible.thinkific.com/collections"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            EMPossible Courses
+                                        </Link>
+                                    </li>
                                 </ul>
                             </div>
                         </li>
                         <li className="py-3">
                             <div className="flex gap-4">
-                                <h2 className="w-32 "> Research</h2>
+                                <h2 className="w-32">
+                                    {" "}
+                                    <Link href="/research">Research</Link>
+                                </h2>
 
                                 <span onClick={() => handleSubMenuToggle("research")}>
                                     <IoMdArrowDropdown />
@@ -186,19 +274,60 @@ export default function Header() {
                                 }`}
                             >
                                 <ul className="mt-3 text-md pl-2">
-                                    <li className="py-2">EMLab</li>
-                                    <li className="py-2">Hybrid 3D Printing</li>
-                                    <li className="py-2">Spatially Variant Lattices</li>
-                                    <li className="py-2">Photonics</li>
-                                    <li className="py-2">Electromagnetics</li>
-                                    <li className="py-2">Computational Electromagnetics</li>
-                                    <li className="py-2">EMLab Capabilities</li>
+                                    <li className="py-2">
+                                        <Link href="/research">
+                                            <span>EMLab</span>
+                                        </Link>
+                                    </li>
+                                    <li className="py-2">
+                                        <Link href="/hybrid-3d-printing">
+                                            <span>Hybrid 3D Printing</span>
+                                        </Link>
+                                    </li>
+                                    <li className="py-2">
+                                        <Link href="/spatially-variant-lattices">
+                                            <span>Spatially Variant Lattices</span>
+                                        </Link>
+                                    </li>
+                                    <li className="py-2">
+                                        <Link href="/photonics">
+                                            <span>Photonics</span>
+                                        </Link>
+                                    </li>
+                                    <li className="py-2">
+                                        <Link href="/electromagnetics">
+                                            <span>Electromagnetics</span>
+                                        </Link>
+                                    </li>
+                                    <li className="py-2">
+                                        <Link href="/computational-electromagnetics">
+                                            <span>Computational Electromagnetics</span>
+                                        </Link>
+                                    </li>
+                                    <li className="py-2">
+                                        <Link href="/emlab-capabilities">
+                                            <span>EMLab Capabilities</span>
+                                        </Link>
+                                    </li>
                                 </ul>
                             </div>
                         </li>
-                        <li className="py-3">Publications</li>
-                        <li className="py-3">News</li>
-                        <li className="py-3">About {websiteDetails.doctorName}</li>
+
+                        <li className="py-3">
+                            <Link href="/publications">
+                                <span>Publications</span>
+                            </Link>
+                        </li>
+                        <li className="py-3">
+                            <Link href="/news">
+                                <span>News</span>
+                            </Link>
+                        </li>
+                        <li className="py-3">
+                            <Link href="/about">
+                                <span>About {websiteDetails.doctorName}</span>
+                            </Link>
+                        </li>
                     </ul>
                     <Input
                         placeholder="Search this Website"
