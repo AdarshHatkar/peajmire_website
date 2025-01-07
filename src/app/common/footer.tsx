@@ -2,6 +2,7 @@
 
 import { FaEnvelope, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import { websiteDetails } from "../constants";
+import Link from "next/link";
 
 export default function Footer() {
     return (
@@ -10,11 +11,31 @@ export default function Footer() {
                 <div className="">
                     <h2 className="text-md font-semibold text-black">Sitemap</h2>
                     <ul className="flex flex-col gap-4 text-gray-700 text-sm pt-3">
-                        <li className="hover:text-white cursor-pointer">Courses Offering</li>
-                        <li className="hover:text-white cursor-pointer">Research</li>
-                        <li className="hover:text-white cursor-pointer">Publications</li>
-                        <li className="hover:text-white cursor-pointer">News</li>
-                        <li className="hover:text-white cursor-pointer">About {websiteDetails.doctorName}</li>
+                        <li className="hover:text-white cursor-pointer">
+                            <Link href="/course-offerings">
+                                <span>Courses Offering</span>
+                            </Link>
+                        </li>
+                        <li className="hover:text-white cursor-pointer">
+                            <Link href="/research">
+                                <span>Research</span>
+                            </Link>
+                        </li>
+                        <li className="hover:text-white cursor-pointer">
+                            <Link href="/publications">
+                                <span>Publications</span>
+                            </Link>
+                        </li>
+                        <li className="hover:text-white cursor-pointer">
+                            <Link href="/news">
+                                <span>News</span>
+                            </Link>
+                        </li>
+                        <li className="hover:text-white cursor-pointer">
+                            <Link href="/about">
+                                <span>About {websiteDetails.doctorName}</span>
+                            </Link>
+                        </li>
                     </ul>
                 </div>
                 <div className="text-start w-[50%] flex flex-col gap-4">
