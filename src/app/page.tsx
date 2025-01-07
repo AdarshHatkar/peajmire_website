@@ -15,6 +15,7 @@ import news2 from "@assets/images/lithuiana.jpg";
 import news3 from "@assets/images/wisdom-image.jpg";
 
 export default function HomePage() {
+
     const settings = {
         dots: true,
         infinite: true,
@@ -126,6 +127,7 @@ function NextArrow({ onClick }: CustomArrowProps) {
             onClick={onClick}
         >
             <IoIosArrowBack className="text-white text-lg font-bold transform rotate-180" />
+
         </div>
     );
 }
