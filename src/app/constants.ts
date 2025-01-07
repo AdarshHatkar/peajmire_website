@@ -25,7 +25,13 @@ export const metaData = {
 };
 
 
-
+export const websiteDetails = {
+  doctorName: "Dr. Rumpf",
+  email: "info@raymond.rumpf.com",
+  facebook: "https://www.facebook.com/EMPossibleProfessor",
+  linkedIn: "https://www.linkedin.com/in/raymondrumpf/",
+  youtube: "https://www.youtube.com/channel/UCPC6uCfBVSK71MnPPcp8AGA"
+};
 
 
 export const contactDetails = {
