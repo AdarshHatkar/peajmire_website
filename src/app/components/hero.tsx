@@ -1,24 +1,34 @@
+"use client";
+
 import hero1 from "@assets/images/hero1.jpg";
 import hero2 from "@assets/images/hero2.jpg";
 import hero3 from "@assets/images/hero3.jpg";
 import hero4 from "@assets/images/hero4.png";
 import Image from "next/image";
+import Link from "next/link";
+import { websiteDetails } from "../constants";
+
 function Hero1() {
     return (
         <div className="w-full h-[600px] relative">
-            <Image src={hero1} alt="heroImage" className="h-full w-full object-cover brightness-75" />
-            <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-start items-start gap-6 z-10 pt-[100px] px-5 md:px-20">
-                <h2 className="text-4xl text-start text-white font-semibold">Dr. Raymonf C. Rumpf</h2>
-                <p className="text-white text-start font-normal text-lg max-w-[450px]">
-                    Professor, Mentor, Inventor, Doctor and director of EMLab
+            <Image src={hero1} alt="Dr. Prafulla E Ajmire" className="h-full w-full object-cover brightness-75" />
+            <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-start items-start gap-6 z-10 pt-[100px] px-5 md:px-20">
+                <h2 className="text-4xl text-start text-white font-semibold">{websiteDetails.doctorName}</h2>
+                <p className="text-white text-start font-normal text-lg max-w-[500px]">
+                    {websiteDetails.position} at {websiteDetails.institution}, Researcher, and Expert in Pattern
+                    Recognition and Computer Vision
                 </p>
-                <div className="flex flex-col gap-4 items-start">
-                    <button className="rounded-full bg-green-600 text-white px-6 py-2 font-medium transition-all duration-300 hover:bg-white hover:text-green-500 hover:border-green-500 border-2 border-transparent">
-                        Contact
-                    </button>
-                    <button className="rounded-full bg-transparent border-2 border-white text-white px-6 py-2 font-medium transition-all duration-300 hover:bg-white hover:text-black ">
-                        About Dr. Rumpf
-                    </button>
+                <div className="flex flex-col md:flex-row gap-4 items-start">
+                    <Link href="/contact">
+                        <button className="rounded-full bg-primary text-white px-6 py-2 font-medium transition-all duration-300 hover:bg-white hover:text-primary hover:border-primary border-2 border-transparent">
+                            Contact
+                        </button>
+                    </Link>
+                    <Link href="/about">
+                        <button className="rounded-full bg-transparent border-2 border-white text-white px-6 py-2 font-medium transition-all duration-300 hover:bg-white hover:text-dark-bg">
+                            About Dr. Ajmire
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>
@@ -28,19 +38,24 @@ function Hero1() {
 function Hero2() {
     return (
         <div className="w-full h-[600px] relative">
-            <Image src={hero2} alt="heroImage" className="h-full w-full object-cover brightness-75" />
-            <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-start items-start gap-6 z-10 pt-[100px] px-5 md:px-20">
-                <h2 className="text-4xl text-start text-white font-semibold">Learn From The Best</h2>
-                <p className="text-white text-start font-normal text-lg max-w-[450px]">
-                    Gain knowledge and skills from industry leaders and educators dedicated to your success.
+            <Image src={hero2} alt="Learn Computer Science" className="h-full w-full object-cover brightness-75" />
+            <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-start items-start gap-6 z-10 pt-[100px] px-5 md:px-20">
+                <h2 className="text-4xl text-start text-white font-semibold">Learn Computer Science</h2>
+                <p className="text-white text-start font-normal text-lg max-w-[500px]">
+                    Gain knowledge and skills in AI, Pattern Recognition, and Computer Vision from experienced educators
+                    with practical research experience.
                 </p>
-                <div className="flex flex-col gap-4 items-start">
-                    <button className="rounded-full bg-green-600 text-white px-6 py-2 font-medium transition-all duration-300 hover:bg-white hover:text-green-500 hover:border-green-500 border-2 border-transparent">
-                        View Course Catalog
-                    </button>
-                    <button className="rounded-full bg-transparent border-2 border-white text-white px-6 py-2 font-medium transition-all duration-300 hover:bg-white hover:text-black ">
-                        Visit EMPossible
-                    </button>
+                <div className="flex flex-col md:flex-row gap-4 items-start">
+                    <Link href="/course-offerings">
+                        <button className="rounded-full bg-primary text-white px-6 py-2 font-medium transition-all duration-300 hover:bg-white hover:text-primary hover:border-primary border-2 border-transparent">
+                            View Course Catalog
+                        </button>
+                    </Link>
+                    <Link href="/research-publications">
+                        <button className="rounded-full bg-transparent border-2 border-white text-white px-6 py-2 font-medium transition-all duration-300 hover:bg-white hover:text-dark-bg">
+                            Research Publications
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>
@@ -50,19 +65,24 @@ function Hero2() {
 function Hero3() {
     return (
         <div className="w-full h-[600px] relative">
-            <Image src={hero3} alt="heroImage" className="h-full w-full object-cover brightness-75" />
-            <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-start items-start gap-6 z-10 pt-[100px] px-5 md:px-20">
-                <h2 className="text-4xl text-start text-white font-semibold">EMLab</h2>
-                <p className="text-white text-start font-normal text-lg max-w-[450px]">
-                    Research center focused on developing the new tech and innovations every time they get chance
+            <Image src={hero3} alt="Computer Science Department" className="h-full w-full object-cover brightness-75" />
+            <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-start items-start gap-6 z-10 pt-[100px] px-5 md:px-20">
+                <h2 className="text-4xl text-start text-white font-semibold">Computer Science Department</h2>
+                <p className="text-white text-start font-normal text-lg max-w-[500px]">
+                    G S Science, Arts and Commerce College in Khamgaon, Maharashtra - fostering innovation in computer
+                    science education and research for over 25 years
                 </p>
-                <div className="flex flex-col gap-4 items-start">
-                    <button className="rounded-full bg-green-600 text-white px-6 py-2 font-medium transition-all duration-300 hover:bg-white hover:text-green-500 hover:border-green-500 border-2 border-transparent">
-                        Contact
-                    </button>
-                    <button className="rounded-full bg-transparent border-2 border-white text-white px-6 py-2 font-medium transition-all duration-300 hover:bg-white hover:text-black ">
-                        About Dr. Rumpf
-                    </button>
+                <div className="flex flex-col md:flex-row gap-4 items-start">
+                    <Link href="/contact">
+                        <button className="rounded-full bg-primary text-white px-6 py-2 font-medium transition-all duration-300 hover:bg-white hover:text-primary hover:border-primary border-2 border-transparent">
+                            Contact
+                        </button>
+                    </Link>
+                    <Link href="/about">
+                        <button className="rounded-full bg-transparent border-2 border-white text-white px-6 py-2 font-medium transition-all duration-300 hover:bg-white hover:text-dark-bg">
+                            About Dr. Ajmire
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>
@@ -72,15 +92,19 @@ function Hero3() {
 function Hero4() {
     return (
         <div className="w-full h-[600px] relative">
-            <Image src={hero4} alt="heroImage" className="h-full w-full object-cover brightness-75" />
-            <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-start items-start gap-6 z-10 pt-[100px] px-5 md:px-20">
-                <h2 className="text-4xl text-start text-white font-semibold">New Book by EMProfessor</h2>
-                <p className="text-white text-start font-normal text-lg max-w-[450px]">
-                    Discover groundbreaking insights and cutting-edge knowledge from EMProfessor's latest publication.
+            <Image src={hero4} alt="Research Publications" className="h-full w-full object-cover brightness-75" />
+            <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-start items-start gap-6 z-10 pt-[100px] px-5 md:px-20">
+                <h2 className="text-4xl text-start text-white font-semibold">Research Publications</h2>
+                <p className="text-white text-start font-normal text-lg max-w-[500px]">
+                    Explore groundbreaking research in Character Recognition, IoT Security, and Quantum Computing in
+                    Cybersecurity. Over {websiteDetails.citations} citations and {websiteDetails.publications}{" "}
+                    publications in renowned journals.
                 </p>
-                <button className="rounded-full bg-green-600 text-white px-6 py-2 font-medium transition-all duration-300 hover:bg-white hover:text-green-500 hover:border-green-500 border-2 border-transparent">
-                    Book Website
-                </button>
+                <Link href="/research-publications">
+                    <button className="rounded-full bg-primary text-white px-6 py-2 font-medium transition-all duration-300 hover:bg-white hover:text-primary hover:border-primary border-2 border-transparent">
+                        View Publications
+                    </button>
+                </Link>
             </div>
         </div>
     );
